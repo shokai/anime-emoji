@@ -14,7 +14,7 @@ export default class App extends Component {
   render(){
     const {store} = this.props
     return (
-      <div>
+      <div className='app'>
         <TextInput store={store} />
         <TextOutput store={store} />
       </div>

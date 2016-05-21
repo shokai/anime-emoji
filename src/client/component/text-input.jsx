@@ -12,7 +12,9 @@ export default class TextInput extends StoreComponent {
     const {text} = this.store.getState()
 
     return (
-      <textarea value={text} onChange={this.onChange} />
+      <div className='text-input'>
+        <textarea value={text} onChange={this.onChange} />
+      </div>
     )
   }
 
