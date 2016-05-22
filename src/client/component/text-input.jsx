@@ -9,17 +9,17 @@ export default class TextInput extends StoreComponent {
   }
 
   render(){
-    const {text} = this.store.getState()
+    const {lines} = this.store.getState()
 
     return (
       <div className='text-input'>
-        <textarea value={text} onChange={this.onChange} />
+        <textarea value={lines.join('\n')} onChange={this.onChange} />
       </div>
     )
   }
 
   onChange(e){
-    this.action.setText(e.target.value)
+    this.action.setLines(e.target.value.split(/[\r\n]/g))
   }
 
 }

@@ -10,7 +10,6 @@ export default class App extends Component {
     }
   }
 
-
   render(){
     const {store} = this.props
     return (
