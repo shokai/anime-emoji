@@ -8,7 +8,8 @@ import middlewares from './middleware/'
 const store = createStore(
   reducer,
   {
-    lines: [ 'いい', '話だ' ]
+    lines: [ 'いい', '話だ' ],
+    size: 128
   },
   applyMiddleware(...middlewares)
 )

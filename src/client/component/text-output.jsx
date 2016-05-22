@@ -9,10 +9,18 @@ export default class TextOutput extends StoreComponent {
   }
 
   render(){
-    const {lines} = this.store.getState()
-    let _lines = lines.map(line => <Line value={line}/>)
+    const {lines, size} = this.store.getState()
+    let style = {
+      width: size + 2,
+      height: size + 2,
+      fontSize: size
+    }
+    let _lines = []
+    for(let i = 0; i < lines.length; i++){
+      _lines.push(<Line value={lines[i]} key={i} />)
+    }
     return (
-      <div className='text-output'>{lines}</div>
+      <div className='text-output' style={style}>{lines}</div>
     )
   }
 
