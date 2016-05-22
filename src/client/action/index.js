@@ -1,5 +1,5 @@
-export function setText(value){
-  return {type: 'set-text', value}
+export function setLines(value){
+  return {type: 'set-lines', value}
 }
 
 export function tick(){

@@ -1,7 +1,7 @@
 export default function reducer(state = {}, action){
   switch(action.type){
-    case 'set-text':
-      state.text = action.value
+    case 'set-lines':
+      state.lines = action.value
       break
   }
   return state
