@@ -9,7 +9,7 @@ const store = createStore(
   reducer,
   {
     lines: [ 'いい', '話だ' ],
-    size: 128
+    size: 64
   },
   applyMiddleware(...middlewares)
 )
