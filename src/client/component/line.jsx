@@ -14,6 +14,7 @@ export default class Line extends Component {
   constructor(){
     super()
     this.adjustSize = this.adjustSize.bind(this)
+    this.adjustTimeout
   }
 
   componentWillMount(){
@@ -21,11 +22,15 @@ export default class Line extends Component {
   }
 
   componentDidUpdate(prevProps, prevState){
-    setTimeout(this.adjustSize, 5)
+    this.adjustTimeout = setTimeout(this.adjustSize, 5)
   }
 
   componentDidMount(){
-    setTimeout(this.adjustSize, 5)
+    this.adjustTimeout = setTimeout(this.adjustSize, 5)
+  }
+
+  componentWillUnmount(){
+    clearTimeout(this.adjustTimeout)
   }
 
   render(){
