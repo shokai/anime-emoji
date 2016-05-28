@@ -2,6 +2,10 @@
   "name": "animemoji",
   "version": "0.0.1",
   "description": "anime-emoji creator slack emoticon",
+  "engines": {
+    "node": "6.x",
+    "npm": "3.x"
+  },
   "main": "run-server.js",
   "scripts": {
     "postinstall": "npm run build",
